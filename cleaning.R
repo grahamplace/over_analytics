@@ -117,3 +117,15 @@ fix_usage.time <- function(time) {
     time <- 0
   }
 }
+
+
+library(RSQLite)
+db <- dbConnect(SQLite(), "overDB.sqlite")
+users <- dbReadTable(db, "users")
+clean_users <- clean_users(users)
+sapply(clean_users, FUN = function(x){class(x)})
+write.csv(clean_users, "cleaned_users.csv")
+
+
+
+

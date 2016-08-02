@@ -8,7 +8,7 @@ clean_users <- function(t) {
   #sapply(t, class)
   
   #Remove erroneous columns
-  t <- t%>% select(Amplitude_ID, Total_Events, Total_Sessions, Usage_Time, First_Seen, Last_Seen, Num_Purchases, Total_Spent, user_id, carrier, city, country, device, device_type, dma, ip_address, language, library, os, paying, platform, region, start_version, version, gp.Active.Projects, gp.Collected.Daily.Artwork, gp.camera_permission, gp.camera_roll_count, gp.daily_artwork_count, gp.photos_permission, gp.project_count, gp.push_enabled)
+  t <- t%>% select(Amplitude_ID, Total_Events, Total_Sessions, Usage_Time, First_Seen, Last_Seen, Num_Purchases, Total_Spent, user_id, carrier, city, country, device, device_type, dma, ip_address, language, library, os, paying, platform, region, start_version, version, gp.Active.Projects, gp.camera_permission, gp.camera_roll_count, gp.daily_artwork_count, gp.photos_permission, gp.project_count, gp.push_enabled)
   
   #Fix erroneous classifications
   t$Amplitude_ID <- as.character(t$Amplitude_ID)
